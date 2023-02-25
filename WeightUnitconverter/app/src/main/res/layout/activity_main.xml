@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/weight_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter weight:"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"/>
+
+        <EditText
+            android:id="@+id/weight_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weight_label"
+            android:inputType="numberDecimal"
+            android:hint="Enter weight in kg, g or mg"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/conversion_type_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select conversion type:"
+            android:textSize="20sp"
+            android:layout_below="@id/weight_edit_text"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/conversion_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/conversion_type_label"
+            android:layout_marginTop="16dp">
+
+            <RadioButton
+                android:id="@+id/kg_to_gram_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kg to Grams"/>
+
+            <RadioButton
+                android:id="@+id/gram_to_kg_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grams to Kg"/>
+
+            <RadioButton
+                android:id="@+id/mg_to_gram_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mg to Grams"/>
+
+            <RadioButton
+                android:id="@+id/gram_to_mg_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grams to Mg"/>
+
+            <RadioButton
+                android:id="@+id/kg_to_mg_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kg to Mg"/>
+
+            <RadioButton
+                android:id="@+id/mg_to_kg_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mg to Kg"/>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/convert_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Convert"
+            android:layout_below="@id/conversion_radio_group"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/result_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_below="@id/convert_button"
+            android:layout_marginTop="16dp"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
